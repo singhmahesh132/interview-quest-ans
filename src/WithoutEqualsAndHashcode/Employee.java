@@ -1,7 +1,4 @@
-package src.EqualsAndHashcode;
-
-import java.util.ArrayList;
-import java.util.List;
+package src.WithoutEqualsAndHashcode;
 
 //Equals and hashcode without implementation
 public class Employee {
