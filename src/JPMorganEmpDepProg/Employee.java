@@ -78,10 +78,12 @@ public class Employee {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         Employee employee = (Employee) o;
-        return empId == employee.empId && Objects.equals(name, employee.name);
+        return empId == employee.empId && name.equals(employee.name);
     }
 
     @Override
