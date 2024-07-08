@@ -1,16 +1,13 @@
-package src.SortUsingStreams;
+package src.StreamsProblem.SortUsingStreams;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-public class Main {
+public class MySort {
 
     public static void main(String[] args) {
         List<Integer> al = Arrays.asList(0, 1, 0, 0, 0, 1, 0, 1);
         Collections.sort(al);
-        al.sort(Comparator.naturalOrder());
+        al.sort(Comparator.reverseOrder());
 
         List<Integer> al1 = Arrays.asList(0, 1, 0, 0, 0, 1, 0, 1);
         al1.stream().sorted().forEach(System.out::print);
@@ -20,10 +17,13 @@ public class Main {
         al2.stream().sorted(Comparator.reverseOrder()).forEach(System.out::print);
         System.out.println();
 
-        List<Integer> al3 = Arrays.asList(1, 2, 4, 10, 9, 5, 3, 20);
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        al3.forEach(binarySearchTree::insertValue);
+        List<Integer> al4 = Arrays.asList(1, 2, 4, 2, 10, 9, 5, 3, 20);
+        TreeSet<Integer> ts = new TreeSet<>(al4);
+        ts.forEach(System.out::print);
+        System.out.println();
 
-        binarySearchTree.inOrderTraversal(binarySearchTree.root);
+        List<Integer> al5 = Arrays.asList(0, 1, 0, 0, 0, 1, 0, 1);
+        TreeSet<Integer> ts1 = new TreeSet<>(al5);
+        ts1.forEach(System.out::print);
     }
 }
