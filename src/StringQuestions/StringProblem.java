@@ -1,5 +1,6 @@
 package src.StringQuestions;
 
+//Ques: give the output of the following String program
 public class StringProblem {
     public static void main(String[] args){
 
