@@ -3,7 +3,7 @@ package src.WithoutEqualsAndHashcode;
 import java.util.HashMap;
 import java.util.Objects;
 
-//Equals and hashcode without implementation
+//Ques: understanding equals() and hashCode() method
 public class Employee {
     private String name;
     private int age;
@@ -38,8 +38,8 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-       System.out.println("in equals : "+ Objects.equals(name, employee.name));
-        return age == employee.age && Objects.equals(name, employee.name);
+        System.out.println("in equals : "+ name.equals(employee.name));
+        return age == employee.age && name.equals(employee.name);
     }
 
     @Override
@@ -53,10 +53,11 @@ public class Employee {
     }
 
 
-    //Without equals() and hashCode() method, Everytime different hash values are generated
+    //Without equals() and hashCode() method, everytime different hash values are generated,
     //for the objects whose internals are same but objects differs.
-    //thus we require hashCode() method to generate same hash value.
-    //and equals to prove objects are same.
+    //Thus, we require hashCode() method to generate same hash value.
+    //Now even if hashCode are same, Object's equals() method is called which compares reference pointing,
+    //and to prove objects are same we override equals() in class.
     public static void main(String[] args){
 
         HashMap<Employee, Integer> hm = new HashMap<>();

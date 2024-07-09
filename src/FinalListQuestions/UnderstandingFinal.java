@@ -3,6 +3,11 @@ package src.FinalListQuestions;
 import java.util.ArrayList;
 import java.util.List;
 
+//Ques : understanding final keyword applicable on List object
+//1. final List<String> l = new ArrayList<>();
+//l.add("A");
+//Will above be allowed?
+
 public class UnderstandingFinal {
     void show(Integer i){System.out.println("integer");}
     /*void show(String s){System.out.println("string");}*/

@@ -10,7 +10,7 @@ public class StringProblem {
         System.out.println(s1 == s2);               //false
         System.out.println(s1.equals(s2));           //true
         System.out.println(s1 == s3);               //true
-        StringBuffer s4 = new StringBuffer("ram");
+        StringBuilder s4 = new StringBuilder("ram");
         System.out.println(s2.equals(s4));          //false
     }
 }

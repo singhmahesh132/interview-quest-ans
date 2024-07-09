@@ -1,10 +1,11 @@
 package src.JPMorganEmpDepProg;
 
-//Write a java program using stream to print employee name and department name of employee having the latest version
-//for specific country
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+//Ques: Write a java program using stream to print employee name and department name of employee,
+//having the latest version for specific country
 
 public class MyMain {
 
