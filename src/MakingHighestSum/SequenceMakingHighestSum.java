@@ -19,11 +19,14 @@ public class SequenceMakingHighestSum {
         //Start iteration over array
         for(int i = 1 ; i < arr.length; i++){
 
-            //if total sum becomes less than zero then reset the sum and also reset the startIndex
+            //if total sum becomes less than zero then reset the sum.
             if(sum < 0){
                 sum = 0;
                 startIndex = i;
             }
+            //if sum is zero then reset the startIndex
+            if(sum==0)
+                startIndex = i;
 
             sum = sum + arr[i];
 
