@@ -22,7 +22,6 @@ public class SequenceMakingHighestSum {
             //if total sum becomes less than zero then reset the sum.
             if(sum < 0){
                 sum = 0;
-                startIndex = i;
             }
             //if sum is zero then reset the startIndex
             if(sum==0)
