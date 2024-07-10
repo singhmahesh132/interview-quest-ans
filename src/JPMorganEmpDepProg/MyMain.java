@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//Ques: Write a java program using stream to print employee name and department name of employee,
+//Ques: Write a java program using stream to print employee name and department name of all employees,
 //having the latest version for specific country
 
 public class MyMain {
