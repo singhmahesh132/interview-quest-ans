@@ -9,37 +9,33 @@ public class CombineTwoArrayWithoutSorting {
         int index2 = 0;
         boolean flag1 = true;
         boolean flag2 = true;
-        int ind = 0;
+        int index3 = 0;
         int[] arr3 = new int[arr1.length+arr2.length];
 
-        while(true){
+        while(flag1 && flag2) {
 
-            if(arr1[index1] < arr2[index2]){
-                arr3[ind] = arr1[index1];
-                if(index1 < arr1.length-1)
+            if (arr1[index1] < arr2[index2]) {
+                arr3[index3] = arr1[index1];
+                if (index1 < arr1.length - 1)
                     index1++;
-                else {
+                else
                     flag1 = false;
-                    break;
-                }
             } else {
-                arr3[ind] = arr2[index2];
-                if(index2 < arr2.length-1)
+                arr3[index3] = arr2[index2];
+                if (index2 < arr2.length - 1)
                     index2++;
-                else {
+                else
                     flag2 = false;
-                    break;
-                }
             }
-            ind++;
+            index3++;
         }
 
         if(!flag1){
-            for(int i = ind+1; i < arr3.length; i++)
+            for(int i = index3; i < arr3.length; i++)
                 arr3[i] = arr2[index2++];
         }
         if(!flag2){
-            for(int i = ind+1; i < arr3.length; i++)
+            for(int i = index3; i < arr3.length; i++)
                 arr3[i] = arr1[index1++];
         }
 
