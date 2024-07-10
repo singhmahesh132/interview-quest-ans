@@ -20,9 +20,9 @@ public class SequenceMakingHighestSum {
         for(int i = 1 ; i < arr.length; i++){
 
             //if total sum becomes less than zero then reset the sum.
-            if(sum < 0){
+            if(sum < 0)
                 sum = 0;
-            }
+
             //if sum is zero then reset the startIndex
             if(sum == 0)
                 startIndex = i;

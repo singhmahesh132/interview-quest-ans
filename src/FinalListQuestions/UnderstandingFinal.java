@@ -23,9 +23,8 @@ public class UnderstandingFinal {
         aList.add("A");
         aList.forEach(System.out::println);
 
-        //here array list variable cannot be assigned new object since it is final,
-        // will give compile error,
-        //but we can do all other list operations like add, remove etc.
+        //here array list variable cannot be assigned new object since it is final, will give compile error.
+        //But we can do all other list operations like add, remove etc.
         //aList = new ArrayList<>();
     }
 }
