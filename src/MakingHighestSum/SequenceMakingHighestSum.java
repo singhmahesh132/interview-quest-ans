@@ -10,8 +10,8 @@ public class SequenceMakingHighestSum {
 
         int[] arr = {1,9,-10,5,3,-4,10,6,9,4,2,-9,2,-20,1,2,3};
 
-        int sum = arr[i];
-        int maxSum = arr[i];
+        int sum = arr[0];
+        int maxSum = arr[0];
         int startIndex = 0;
         int seqStartIndex = 0;
         int seqEndIndex = 0;
@@ -24,7 +24,7 @@ public class SequenceMakingHighestSum {
                 sum = 0;
             }
             //if sum is zero then reset the startIndex
-            if(sum==0)
+            if(sum == 0)
                 startIndex = i;
 
             sum = sum + arr[i];
