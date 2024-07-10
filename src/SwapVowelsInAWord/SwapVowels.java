@@ -11,7 +11,7 @@ public class SwapVowels {
         int ei = alphaArr.length-1;
         int fdwVowel = -1;
         int bkdVowel = -1;
-        for(int i = 0; i <= alphaArr.length/2; i++){
+        for(int i = 0; i <= (alphaArr.length-1)/2; i++){
             if(alphaArr[i] == 'a' || alphaArr[i] == 'e' || alphaArr[i] == 'i' || alphaArr[i] == 'o' || alphaArr[i] == 'u' )
                 fdwVowel = i;
 
