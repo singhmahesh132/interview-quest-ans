@@ -9,7 +9,7 @@ public class SwapVowels {
     //Other optimised approach is using two pointers as demonstrated below.
     public static void main(String[] args){
 
-        String word = "qqqqqei";
+        String word = "education";
         char[] alphaArr = word.toCharArray();
         int head = 0;
         int tail = alphaArr.length-1;
@@ -34,7 +34,7 @@ public class SwapVowels {
                 tailFlag = -1;
             }
             //if head or tail flag have value other than -1 i.e. it is holding position of a vowel. 
-            //thus do not increment or decremen. else do.
+            //thus do not increment or decrement. else do.
             if(headFlag==-1)
                 head++;
             if(tailFlag==-1)
