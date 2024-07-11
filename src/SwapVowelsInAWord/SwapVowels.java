@@ -9,30 +9,36 @@ public class SwapVowels {
     //Other optimised approach is using two pointers as demonstrated below.
     public static void main(String[] args){
 
-        String word = "mahesh";
+        String word = "qqqqqei";
         char[] alphaArr = word.toCharArray();
-        int ei = alphaArr.length-1;
-        int fdwVowel = -1;
-        int bkdVowel = -1;
+        int head = 0;
+        int tail = alphaArr.length-1;
+        int headFlag = -1;
+        int tailFlag = -1;
 
         //Traversing only half array as we are using two pointers, one from front and one from back,
         //to find the vowels.
-        for(int i = 0; i <= (alphaArr.length-1)/2; i++){
-            if(alphaArr[i] == 'a' || alphaArr[i] == 'e' || alphaArr[i] == 'i' || alphaArr[i] == 'o' || alphaArr[i] == 'u' )
-                fdwVowel = i;
+        while(head<=tail){
+            if(alphaArr[head] == 'a' || alphaArr[head] == 'e' || alphaArr[head] == 'i' || alphaArr[head] == 'o' || alphaArr[head] == 'u')
+                headFlag = head;
 
-            if(alphaArr[ei] == 'a' || alphaArr[ei] == 'e' || alphaArr[ei] == 'i' || alphaArr[ei] == 'o' || alphaArr[ei] == 'u')
-                bkdVowel = ei;
+            if(alphaArr[tail] == 'a' || alphaArr[tail] == 'e' || alphaArr[tail] == 'i' || alphaArr[tail] == 'o' || alphaArr[tail] == 'u')
+                tailFlag = tail;
 
             //if both the pointers are pointing to vowel then just swap the values.
-            if(fdwVowel!=-1 && bkdVowel!=-1){
-                char temp = alphaArr[fdwVowel];
-                alphaArr[fdwVowel] = alphaArr[bkdVowel];
-                alphaArr[bkdVowel] = temp;
-                fdwVowel = -1;
-                bkdVowel = -1;
+            if(headFlag!=-1 && tailFlag!=-1){
+                char temp = alphaArr[headFlag];
+                alphaArr[headFlag] = alphaArr[tailFlag];
+                alphaArr[tailFlag] = temp;
+                headFlag = -1;
+                tailFlag = -1;
             }
-            ei--;
+            //if head or tail flag have value other than -1 i.e. it is holding position of a vowel. 
+            //thus do not increment or decremen. else do.
+            if(headFlag==-1)
+                head++;
+            if(tailFlag==-1)
+                tail--;
         }
 
         for (char c : alphaArr){
