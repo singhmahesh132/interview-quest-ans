@@ -51,5 +51,6 @@ public class GreatestCommonDivisorString {
 
     public static void main(String[] args){
         System.out.println(GreatestCommonDivisorString.gcdOfStrings("ABABAB","ABAB"));
+        System.out.println(GreatestCommonDivisorString.gcdOfStrings("TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX","TAUXXTAUXXTAUXXTAUXXTAUXX"));
     }
 }
