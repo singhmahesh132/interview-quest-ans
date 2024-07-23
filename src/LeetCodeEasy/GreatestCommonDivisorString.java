@@ -37,12 +37,9 @@ public class GreatestCommonDivisorString {
     }
 
     public static boolean getWordDivisor(String str, String wrd){
-        int divCount = 0;
         while(!str.isEmpty()){
-            if(str.startsWith(wrd)){
-                divCount++;
+            if(str.startsWith(wrd))
                 str = str.substring(wrd.length());
-            }
             else
                 return false;
         }
