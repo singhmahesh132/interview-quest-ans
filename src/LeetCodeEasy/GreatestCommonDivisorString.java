@@ -1,8 +1,5 @@
 package src.LeetCodeEasy;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /* 1071. Greatest Common Divisor of Strings
 Hint
 For two strings s and t, we say "t divides s" if and only if s = t + t + t + ... + t + t (i.e., t is concatenated with itself one or more times).
