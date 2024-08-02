@@ -1,7 +1,8 @@
-package src.LeetCodeEasy;
+package src.LeetCode75Days;
 
 /*
 605. Can Place Flowers
+
 You have a long flowerbed in which some of the plots are planted, and some are not. However,
 flowers cannot be planted in adjacent plots.
 

@@ -10,39 +10,42 @@ public class SwapVowels {
     public static void main(String[] args){
 
         String word = "education";
-        char[] alphaArr = word.toCharArray();
-        int head = 0;
-        int tail = alphaArr.length-1;
-        int headFlag = -1;
-        int tailFlag = -1;
+        int headPtr = 0;
+        int tailPtr = word.length()-1;
+        boolean headVovFlg = false;
+        boolean tailVovFlg = false;
+        char[] charArr = word.toCharArray();
 
         //Traversing only half array as we are using two pointers, one from front and one from back,
         //to find the vowels.
-        while(head<=tail){
-            if(alphaArr[head] == 'a' || alphaArr[head] == 'e' || alphaArr[head] == 'i' || alphaArr[head] == 'o' || alphaArr[head] == 'u')
-                headFlag = head;
-
-            if(alphaArr[tail] == 'a' || alphaArr[tail] == 'e' || alphaArr[tail] == 'i' || alphaArr[tail] == 'o' || alphaArr[tail] == 'u')
-                tailFlag = tail;
+        while(headPtr<tailPtr){
 
             //if both the pointers are pointing to vowel then just swap the values.
-            if(headFlag!=-1 && tailFlag!=-1){
-                char temp = alphaArr[headFlag];
-                alphaArr[headFlag] = alphaArr[tailFlag];
-                alphaArr[tailFlag] = temp;
-                headFlag = -1;
-                tailFlag = -1;
+            if(headVovFlg && tailVovFlg){
+                char temp = charArr[headPtr];
+                charArr[headPtr] = charArr[tailPtr];
+                charArr[tailPtr] = temp;
+                headVovFlg = false;
+                tailVovFlg = false;
+                headPtr++;
+                tailPtr--;
             }
-            //if head or tail flag have value other than -1 i.e. it is holding position of a vowel. 
-            //thus do not increment or decrement. else do.
-            if(headFlag==-1)
-                head++;
-            if(tailFlag==-1)
-                tail--;
+
+            //if headPointer is pointing to vowel then mark flag true else increment the pointer.
+            if(charArr[headPtr]=='a' || charArr[headPtr]=='e' || charArr[headPtr]=='i' || charArr[headPtr]=='o' || charArr[headPtr]=='u'
+                    || charArr[headPtr]=='A' || charArr[headPtr]=='E' || charArr[headPtr]=='I' || charArr[headPtr]=='O' || charArr[headPtr]=='U')
+                headVovFlg = true;
+            else
+                headPtr++;
+            //if tailPointer is pointing to vowel then mark flag true else decrement the pointer.
+            if(charArr[tailPtr]=='a' || charArr[tailPtr]=='e' || charArr[tailPtr]=='i' || charArr[tailPtr]=='o' || charArr[tailPtr]=='u'
+                    || charArr[tailPtr]=='A' || charArr[tailPtr]=='E' || charArr[tailPtr]=='I' || charArr[tailPtr]=='O' || charArr[tailPtr]=='U')
+                tailVovFlg = true;
+            else
+                tailPtr--;
         }
 
-        for (char c : alphaArr){
-            System.out.print(c);
-        }
+        //instead of for looping the charArray and appending each character to StringBuffer and then printing.
+        System.out.println(String.valueOf(charArr));
     }
 }
