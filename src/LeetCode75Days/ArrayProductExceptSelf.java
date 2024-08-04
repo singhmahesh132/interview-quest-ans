@@ -5,7 +5,6 @@ import java.util.Arrays;
 /*
 238. Product of Array Except Self
 
-Hint
 Given an integer array numbs, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
 
 The product of any prefix or suffix of numbs is guaranteed to fit in a 32-bit integer.

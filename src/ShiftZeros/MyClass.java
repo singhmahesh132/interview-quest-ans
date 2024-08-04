@@ -1,4 +1,6 @@
-package src.ShiftZerosToStart;
+package src.ShiftZeros;
+
+import java.util.Arrays;
 
 //Ques : Shift Zeros to the start of the array without changing the sequence of other non-zero numbers.
 public class MyClass {
@@ -18,10 +20,7 @@ public class MyClass {
             else
                 cpyArr[startIndex++] = i;
         }
-        for (int k : cpyArr) {
-            System.out.print(k+" ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(cpyArr));
 
         //if array contains numbers like 1,2,3,etc.
         //we create two array, one to store zero's only and other to store non-zeros.
@@ -75,8 +74,28 @@ public class MyClass {
             }
 
         }
-        for (int j : arr2) {
-            System.out.print(j+" ");
+        System.out.println(Arrays.toString(arr2));
+
+
+        //move Zeros to end
+        int[] nums = {0, 1, 0, 0, 0, 0, 2, 0, 3, 0};
+        MyClass.moveZeroesToStart(nums);
+    }
+
+    public static void moveZeroesToStart(int[] nums) {
+
+        if(nums.length == 1)
+            return;
+        int ptr = 0;
+        for(int num : nums){
+            if(num != 0)
+                nums[ptr++] = num;
         }
+
+        while(ptr < nums.length){
+            nums[ptr++] = 0;
+        }
+
+        System.out.println(Arrays.toString(nums));
     }
 }
